@@ -1,4 +1,13 @@
+## 0.3.2
+
+- Standardized the package icon background and OCT wordmark placement to match the original OctoberJemini artwork.
+- Artwork-only package update; mod DLLs and gameplay behavior are unchanged.
+
 # Changelog
+
+## 0.3.1
+- Added prominent bug-report, feature-request and source links to the main mod description.
+- Documentation-only package update; mod binaries are unchanged.
 
 ## 0.3.0 — OctoberJemini maintained fork
 
