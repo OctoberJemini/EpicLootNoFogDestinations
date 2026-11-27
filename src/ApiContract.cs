@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Reflection;
+
 namespace ValheimEpicLootNoFogDestinations { internal static class ApiContract { internal static readonly string[] Entries = {
 "E|EpicLoot.Adventure.BiomeIndexState|Ready|2",
 "E|EpicLoot.Adventure.BountyState|Available|0",
@@ -23,4 +26,19 @@ namespace ValheimEpicLootNoFogDestinations { internal static class ApiContract {
 "T|EpicLoot.Adventure.BountyState",
 "T|EpicLoot.Adventure.Feature.MerchantListPanel`1",
 "T|EpicLoot.Adventure.TreasureMapListElement",
-}; } }
+};
+// The hook consumes only biome and onComplete. Epic Loot 0.16 removed the
+// unused saveData argument; retain strict checks for both supported shapes.
+internal static List<string> Check(Assembly assembly) {
+    var legacyFailures = Compatibility.Check(assembly, Entries);
+    if (legacyFailures.Count == 0) return legacyFailures;
+    var current = (string[])Entries.Clone();
+    for (int i = 0; i < current.Length; i++) {
+        if (current[i].StartsWith("M|EpicLoot.Adventure.Feature.BountyLocationEarlyCache|TryGetBiomePoint|"))
+            current[i] = current[i].Replace("EpicLoot.Adventure.AdventureSaveData,", "");
+        if (current[i].StartsWith("P|EpicLoot.Adventure.Feature.BountyLocationEarlyCache|TryGetBiomePoint|"))
+            current[i] = current[i].Replace("biome,saveData,onComplete", "biome,onComplete");
+    }
+    return Compatibility.Check(assembly, current);
+}
+} }

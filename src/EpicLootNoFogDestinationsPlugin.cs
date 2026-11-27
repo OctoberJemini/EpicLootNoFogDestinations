@@ -20,7 +20,7 @@ namespace ValheimEpicLootNoFogDestinations
     {
         public const string PluginGuid = "kenjorissen.mods.epiclootnofogdestinations";
         public const string PluginName = "EpicLoot: No Fog Destinations";
-        public const string PluginVersion = "0.3.0";
+        public const string PluginVersion = "0.3.3";
         public const string EpicGuid = "randyknapp.mods.epicloot";
         private static EpicLootNoFogDestinationsPlugin? Instance;
         private ConfigEntry<bool> enabledSetting = null!;
@@ -46,7 +46,7 @@ namespace ValheimEpicLootNoFogDestinations
             {
                 try
                 {
-                    var failures = Compatibility.Check(epic.Instance.GetType().Assembly, ApiContract.Entries);
+                    var failures = ApiContract.Check(epic.Instance.GetType().Assembly);
                     if (failures.Count > 0) compatibilityWarning.Reason = "EpicLoot " + installed + ": " + string.Join("; ", failures.ToArray());
                     else Logger.LogInfo("EpicLoot " + installed + " passed API checks; installing explored-destination hooks.");
                 }

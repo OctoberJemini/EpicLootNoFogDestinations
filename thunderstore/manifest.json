@@ -1,6 +1,6 @@
 {
   "name": "Epic_Loot_No_Fog_Destinations",
-  "version_number": "0.3.2",
+  "version_number": "0.3.3",
   "website_url": "https://github.com/OctoberJemini/EpicLootNoFogDestinations",
   "description": "Keep new Epic Loot bounty and treasure destinations in explored areas. Shared-map support, guarded compatibility checks, and clear inactive warnings. Maintained fork of Ken Jorissen's add-on.",
   "dependencies": [

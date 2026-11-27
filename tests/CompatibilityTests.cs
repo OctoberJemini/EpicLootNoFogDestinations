@@ -24,7 +24,7 @@ class CompatibilityTests {
    return Assembly.Load(e.Name);
   };
   var assembly=Assembly.LoadFrom(args[0]);
-  var failures=Compatibility.Check(assembly,ApiContract.Entries);
+  var failures=ApiContract.Check(assembly);
   Console.WriteLine(Path.GetFileName(Path.GetDirectoryName(Path.GetDirectoryName(args[0])))+": "+(failures.Count==0?"PASS":"FAIL")+" ("+ApiContract.Entries.Length+" contracts; 7 checker fixture checks)");
   foreach(var failure in failures)Console.WriteLine(failure);
   Environment.ExitCode=failures.Count==0?0:1;

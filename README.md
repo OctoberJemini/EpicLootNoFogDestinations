@@ -19,12 +19,13 @@ This restricts the **destination centre**, not the entire search circle or every
 
 ## Compatibility
 
-Version 0.3.0 checks the Epic Loot APIs it needs before installing patches. A matching version number is no longer required: compatible older and newer releases can pass the same checks.
+Version 0.3.3 checks the Epic Loot APIs it needs before installing patches. A matching version number is no longer required: compatible older and newer releases can pass the same checks.
 
 | Epic Loot version | Validation |
 |---|---|
 | 0.14.4, 0.14.5, 0.14.7–0.14.13 | Passed the required API checks. |
 | 0.15.1–0.15.4 | Passed the required API checks. |
+| 0.15.6, 0.16.0 | Passed the required API checks, including the updated 0.16.0 placement signature. |
 | 0.13.3 | Missing required APIs; add-on remains inactive. |
 | Other/future versions | Checked at startup; supported only if required APIs remain compatible. |
 

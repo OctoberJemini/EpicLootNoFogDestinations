@@ -5,8 +5,8 @@ namespace ValheimEpicLootNoFogDestinations
     internal sealed class CompatibilityWarning
     {
         internal const string MinimumVersion = "0.14.4";
-        internal const string SupportedVersion = "0.15.4";
-        internal const string SupportedVersions = "0.14.4–0.14.5, 0.14.7–0.14.13 and 0.15.1–0.15.4 (API checks)";
+        internal const string SupportedVersion = "0.16.0";
+        internal const string SupportedVersions = "0.14.4–0.14.5, 0.14.7–0.14.13, 0.15.1–0.15.4, 0.15.6 and 0.16.0 (API checks)";
         internal const string Header = "EpicLoot: No Fog Destinations — INACTIVE";
         internal const string HookFailureReason = "The required EpicLoot hooks could not be installed. Check the BepInEx log and update/reinstall this add-on.";
         internal string? Reason;

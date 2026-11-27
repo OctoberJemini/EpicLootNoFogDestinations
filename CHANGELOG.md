@@ -1,3 +1,10 @@
+## 0.3.3
+
+- Support Epic Loot 0.16.0's placement API after removal of its unused saveData parameter.
+- Preserve compatibility with the older three-argument placement API and retain strict signature and parameter-name checks for both forms.
+- Explored-centre selection, purchase guards, existing quest locations and rewards are unchanged.
+- Validated with offline policy tests and released-assembly API checks; no in-game playtest is claimed.
+
 ## 0.3.2
 
 - Standardized the package icon background and OCT wordmark placement to match the original OctoberJemini artwork.
