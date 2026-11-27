@@ -4,6 +4,10 @@ Keep new Epic Loot adventures on the map you have explored. New bounty and treas
 
 **OctoberJemini's maintained fork of Ken Jorissen's MIT-licensed add-on. This is an independent release, not an official Epic Loot or upstream release.**
 
+## Why update to 0.3.3?
+
+Epic Loot 0.16.0 changed its destination-placement API. Older No Fog Destinations versions detect that change and disable the explored-map restriction. Version 0.3.3 restores compatibility while retaining support for previously checked older releases. Existing quests, rewards and exploration rules are unchanged.
+
 ## What it does
 
 | Situation | Behavior |
@@ -25,7 +29,8 @@ Version 0.3.3 checks the Epic Loot APIs it needs before installing patches. A ma
 |---|---|
 | 0.14.4, 0.14.5, 0.14.7–0.14.13 | Passed the required API checks. |
 | 0.15.1–0.15.4 | Passed the required API checks. |
-| 0.15.6, 0.16.0 | Passed the required API checks, including the updated 0.16.0 placement signature. |
+| 0.15.6 | Passed the required API checks. |
+| 0.16.0 | Passed the updated placement API checks; maintainer confirmed 0.3.3 working in game. |
 | 0.13.3 | Missing required APIs; add-on remains inactive. |
 | Other/future versions | Checked at startup; supported only if required APIs remain compatible. |
 

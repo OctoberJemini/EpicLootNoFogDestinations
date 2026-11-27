@@ -1,9 +1,9 @@
 ## 0.3.3
 
-- Support Epic Loot 0.16.0's placement API after removal of its unused saveData parameter.
+- Fixed compatibility with Epic Loot 0.16.0. Its placement API removed an unused parameter, which caused older No Fog Destinations versions to disable the explored-map restriction and show an inactive warning.
 - Preserve compatibility with the older three-argument placement API and retain strict signature and parameter-name checks for both forms.
 - Explored-centre selection, purchase guards, existing quest locations and rewards are unchanged.
-- Validated with offline policy tests and released-assembly API checks; no in-game playtest is claimed.
+- Passed 86 offline policy checks and API checks against 15 Epic Loot releases. The maintainer confirmed the update works in game with Epic Loot 0.16.0.
 
 ## 0.3.2
 
